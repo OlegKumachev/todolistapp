@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'todoapp',
-        'USER': 'postgres',
-        'PASSWORD': '12345',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
     }
 }
 
@@ -142,10 +142,10 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "ToDoApp",
-    "VERSION": "0.0.1", # версия проекта
-    "SERVE_INCLUDE_SCHEMA": False, # исключить эндпоинт /schema
+    "VERSION": "0.0.1",
+    "SERVE_INCLUDE_SCHEMA": False,
     "SWAGGER_UI_SETTINGS": {
-        "filter": True, # включить поиск по тегам
+        "filter": True,
     },
     "COMPONENT_SPLIT_REQUEST": True
 }
