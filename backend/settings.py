@@ -129,17 +129,19 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 REST_FRAMEWORK = {
+    'TEST_REQUEST_DEFAULT_FORMAT': 'json',
     'DEFAULT_FILTER_BACKENDS':
         [
             'django_filters.rest_framework.DjangoFilterBackend',
         ],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 5,
+    'PAGE_SIZE': 100,
     'DEFAULT_SCHEMA_CLASS': 'drf_spectacular.openapi.AutoSchema',
+
 }
 
 SPECTACULAR_SETTINGS = {
-    "TITLE": "Post API", # название проекта
+    "TITLE": "ToDoApp",
     "VERSION": "0.0.1", # версия проекта
     "SERVE_INCLUDE_SCHEMA": False, # исключить эндпоинт /schema
     "SWAGGER_UI_SETTINGS": {

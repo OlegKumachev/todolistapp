@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 class Tasks(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField(blank=True)
+    description = models.TextField()
     due_date = models.DateTimeField(null=True, blank=True)
     tags = models.ManyToManyField("Tag", related_name='tasks')
     is_completed = models.BooleanField(default=False)

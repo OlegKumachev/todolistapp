@@ -11,7 +11,7 @@ from .serializers import TasksSerializers
 # Create your views here.
 
 class TaskViewSet(ModelViewSet):
-    queryset = Tasks.objects.all()
+    queryset = Tasks.objects.all().order_by('title')
     serializer_class = TasksSerializers
     filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
     filter_fields = ['is_completed', 'tags', 'title']
